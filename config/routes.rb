@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   get "password/reset/edit", to: "password_resets#edit"
   patch "password/reset/edit", to: "password_resets#update"
 
+  get "/auth/twitter/callback", to: "omniauth_callbacks#twitter"
+
   root to: 'main#index'
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
